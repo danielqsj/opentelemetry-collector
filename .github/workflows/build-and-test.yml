@@ -22,7 +22,7 @@ jobs:
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
       - name: Cache Go
         id: module-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-go-modules
         with:
@@ -35,7 +35,7 @@ jobs:
         run: make gomoddownload
       - name: Cache Tools
         id: tool-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-tool-binaries
         with:
@@ -60,7 +60,7 @@ jobs:
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
       - name: Cache Go
         id: module-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-go-modules
         with:
@@ -70,7 +70,7 @@ jobs:
           key: go-pkg-mod-${{ runner.os }}-${{ hashFiles('**/go.mod', '**/go.sum') }}
       - name: Cache Tools
         id: tool-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-tool-binaries
         with:
@@ -108,7 +108,7 @@ jobs:
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
       - name: Cache Go
         id: module-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-go-modules
         with:
@@ -118,7 +118,7 @@ jobs:
           key: go-pkg-mod-${{ runner.os }}-${{ hashFiles('**/go.mod', '**/go.sum') }}
       - name: Cache Tools
         id: tool-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-tool-binaries
         with:
@@ -142,7 +142,7 @@ jobs:
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
       - name: Cache Go
         id: module-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-go-modules
         with:
@@ -152,7 +152,7 @@ jobs:
           key: go-pkg-mod-${{ runner.os }}-${{ hashFiles('**/go.mod', '**/go.sum') }}
       - name: Cache Tools
         id: tool-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-tool-binaries
         with:
@@ -182,7 +182,7 @@ jobs:
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
       - name: Cache Go
         id: module-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         env:
           cache-name: cache-go-modules
         with:
